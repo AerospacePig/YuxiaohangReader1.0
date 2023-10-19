@@ -1,0 +1,15 @@
+yxhr_env/
+__pycache__/
+instance/
+
+*.pyc
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+.idea/
+*.swp
+*~
