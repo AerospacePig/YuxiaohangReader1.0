@@ -1,10 +1,12 @@
-DROP TABLE IF EXISTS user;
+
+
+DROP TABLE IF EXISTS archive;
 DROP TABLE IF EXISTS post;
 
-CREATE TABLE user (
+CREATE TABLE archive (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  username TEXT UNIQUE NOT NULL,
-  password TEXT NOT NULL
+  archivename TEXT UNIQUE NOT NULL,
+  password TEXT DEFAULT NULL
 );
 
 CREATE TABLE post (
@@ -13,5 +15,6 @@ CREATE TABLE post (
   created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   title TEXT NOT NULL,
   body TEXT NOT NULL,
-  FOREIGN KEY (author_id) REFERENCES user (id)
+  FOREIGN KEY (author_id) REFERENCES archive (id)
 );
+

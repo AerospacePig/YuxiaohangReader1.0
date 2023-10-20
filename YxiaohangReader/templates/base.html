@@ -1,0 +1,26 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - YxiaohangReader</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+  <h1>YxiaohangReader</h1>
+  <ul>
+    {% if g.archive %}
+      <li><span>{{ g.archive['archivename'] }}</span>
+      <li><a href="{{ url_for('index.logout') }}">Log Out</a>
+    {% else %}
+      <li><a href="{{ url_for('index.createArchive') }}">创建存档</a>
+      <li><a href="{{ url_for('index.selectArchive') }}">选择存档</a>
+    {% endif %}
+  </ul>
+</nav>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+
+  {% block content %}{% endblock %}
+</section>
+
