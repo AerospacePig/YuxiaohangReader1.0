@@ -1,0 +1,44 @@
+.bookBlock {
+    display: inline-grid;
+    grid-template-rows: 150px 30px 10px;
+    grid-template-columns: 120px;
+    justify-items: center;
+    align-items: center;
+
+    transform: translateX(4vw);
+}
+.bookNameButton {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    justify-self: stretch;
+    align-self: stretch;
+
+    padding: 0;
+
+    border-image-source: radial-gradient(60% 60%, transparent 0px, transparent 100%, rgb(0, 0, 0, 0.5) 100%);
+    /* 横轴纵轴, 起点颜色位置, 渐变颜色位置, 终点颜色位置 */
+    border-image-slice: 1;
+    /* 定义切片方式, 此处被切为圆 */
+    border-image-outset: 10px;
+    /* 边框图像偏移量 */
+    border-width: 3px;
+    border-style: solid;
+
+    box-shadow: 4px 4px 8px -1px rgb(0, 0, 0, 0.6);
+}
+.bookBlock:nth-child(2) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+.bookBlock:nth-child(3) {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+.statusBarHr + h4 {
+    display: inline-block;
+    margin-left: 5%;
+    transform: translateY(15vh);
+}
+h4, h6 {
+    margin: 0;
+}

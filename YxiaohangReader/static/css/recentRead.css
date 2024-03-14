@@ -1,0 +1,5 @@
+.bookBlock {
+    margin-right: 5vw;
+    margin-bottom: 3vh;
+    transform: translateX(4vw) translateY(16vh);
+}

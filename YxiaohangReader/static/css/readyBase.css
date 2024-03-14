@@ -1,0 +1,78 @@
+html { 
+    font-family: Arial, sans-serif;
+    background-color: rgb(145, 176, 179);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* 背景固定 */
+    width: 100vw;
+    height: 100vh;
+}
+body {
+    max-width: 80%;
+    max-height: 100%;
+    height: 100%;
+    margin: auto;
+}
+nav {
+    display: flex;
+    align-items: center;
+    height: 3em;
+    position: relative;
+}
+nav > div {
+    margin: auto;
+    position: absolute;
+    left: 42%;
+}
+nav > div > a:first-child {
+    margin-right: 30px;
+}
+a {
+    font: 20px SourceHanSansCN-Bold;
+    color: #ffffff90;
+    text-decoration: none;
+}
+.selectArchiveLink {
+    position: relative;
+    display: inline-block;
+}
+.selectArchiveLink::after,
+.createArchiveLink::after {
+    content: "";
+    background-image: url("../img/倒三角图标.png");
+    background-size: cover;
+    position: absolute;
+    top: 135%;
+    left: 46%;
+    width: 130px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+}
+.createArchiveLink {
+    position: relative;
+    display: inline-block;
+}
+.container {
+    height: 80%;
+    margin: 16px auto;
+    border-radius: 15px;
+    background-image: url("../img/background.jpg");
+    opacity: 0.5;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+.container_1 {
+    position: relative;
+    height: 100%;
+    margin: 16px auto;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255, 0.4);
+}
+button {
+    cursor:pointer; /* 鼠标手型 */
+}
+button:active {
+    background-color: transparent;
+}

@@ -1,0 +1,165 @@
+html { 
+    font-family: Arial, sans-serif;
+    background-color: rgb(145, 176, 179);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+body {
+    max-width: 80%;
+    max-height: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.container {
+    height: 92%;
+    margin: 0;
+    display: flex;
+    position: relative;
+    border-radius: 15px;
+    background-image: url("../img/background.png");
+    background-color: rgb(189, 206, 207);
+    opacity: 0.5;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    transform: translateY(4px);
+    overflow: hidden;
+}
+.mainContainer {
+    height: 100%;
+    width: 100%;
+    min-width: 70%;
+    position: relative;
+    border-radius: 20px;
+
+    padding-top: 5px 0 0 5px; /* 内边距 */
+    border-top: 5px solid black;
+    border-left: 5px solid black;
+    overflow: hidden;
+}
+.borderRadius {
+    border-radius: 20px 0 0 20px;
+}
+.childContainer {
+    height: 100%;
+    width: 30%;
+    overflow: hidden;
+    position: relative;
+    display: none;
+    border-radius: 0 20px 20px 0;
+    padding-right: 5px;
+    border-right: 5px solid black;
+}
+nav {
+    display: flex;
+}
+.mainNav {
+    justify-content: end;
+}
+.childNav {
+    justify-content: center;
+    column-gap: 20px;
+
+    position: absolute;
+    left: 0;
+    height: 2em;
+    width: 20vw;
+    transform: translateY(50%);
+}
+.childNav::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 25px;
+    top: -5px;
+    right: 10px;
+    background-color: black;
+}
+.childNav > a {
+    font-weight: 700;
+    font-size: 17px;
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+.underlineFocus {
+    border-bottom: 3px solid black;
+}
+.statusBarHr {
+    margin: 0;
+    border: 1px solid black;
+    margin-left: 30%;
+    width: 20%;
+    position: relative;
+    border-bottom: none;
+    transition: transform 3s;
+    transform: translateY(60px);
+}
+.statusBarHr::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: 6px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: black;
+}
+.statusBarHr::after {
+    content: 'Yxiaohang Reader';
+    position: absolute;
+    font-size: 15px;
+    font-weight: 700;
+    top: -10px;
+    right: -140px;
+}
+.statusBarHr + p {
+    position: absolute;
+    top: -6px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+}
+.statusBarHr.hrMove {
+    animation: hrMove 2s forwards;
+}
+@keyframes hrMove {
+    0% {margin-left: 30%}
+    25% {margin-left: 0%}
+    100% {margin-left: 30%}
+}
+
+.foldIcon {
+    position: absolute;
+    content: "";
+    display: none;
+    background-size: cover;
+    width: auto;
+    height: 5%;
+    right: 0;
+    top: 1%;
+}
+.rotate180 {
+    transform: rotate(180deg);
+}
+.box1, .box2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-width: 0 0 0 1px;
+    transition: left 0.5s;
+    background-color: rgb(255, 255, 255, 0.4);
+}
+button {
+    cursor:pointer; /* 鼠标手型 */
+}
+button:active {
+    background-color: transparent;
+}
